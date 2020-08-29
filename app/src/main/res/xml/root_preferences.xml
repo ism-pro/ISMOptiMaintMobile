@@ -1,0 +1,46 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/header_database">
+
+        <EditTextPreference
+            app:key="key_db_ip"
+            app:title="@string/header_db_IP"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="key_db_instance"
+            app:title="@string/header_db_instance"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="key_db_dbname"
+            app:title="@string/header_db_dbname"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/header_database_credential">
+
+        <EditTextPreference
+            app:key="key_db_user"
+            app:title="@string/header_db_user"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="key_db_password"
+            app:title="@string/header_db_password"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/header_database_sync">
+
+        <SwitchPreferenceCompat
+            app:key="key_db_connect"
+            app:title="@string/header_db_connect" />
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

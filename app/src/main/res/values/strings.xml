@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">ISM OptiMaint Mobile</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">ISM OptiMaint Mobile</string>
+    <string name="nav_header_subtitle">r.hendrick@castel-afrique.com</string>
+    <string name="nav_header_desc">Menu de navigation</string>
+    <string name="action_settings">Paramètres</string>
+
+
+    <!-- Groupe Menu Démarrage -->
+    <string name="menu_home">Acceuil</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+    <!-- Groupe Menu Configurations -->
+    <string name="menu_setup">Configurations</string>
+    <string name="menu_database">Base de données</string>
+    <string name="menu_login">Connexion</string>
+
+
+    <!-- Preference Titles -->
+    <string name="header_database">DB OptimMaint</string>
+    <string name="header_db_IP">IP</string>
+    <string name="header_db_instance">Instance</string>
+    <string name="header_db_dbname">Nom (base de donnée)</string>
+
+    <string name="header_database_credential">Connexion</string>
+    <string name="header_db_user">Utilisateur</string>
+    <string name="header_db_password">Mot de passe</string>
+
+    <string name="header_database_sync">Sync</string>
+    <string name="header_db_connect">Connexion</string>
+
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Téléchargement automatique des emails entrant</string>
+    <string name="attachment_summary_off">Télécharge les attaches seulement sur demande manuelle</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email \ Login</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">Connxion ou inscription</string>
+    <string name="action_sign_in_short">Connexion</string>
+    <string name="welcome">"Bienvenue !"</string>
+    <string name="invalid_username">Utilisateur non valide !</string>
+    <string name="invalid_password">Le mot de passe doit contenir > 5 characters</string>
+    <string name="login_failed">"Connexion échouée !"</string>
+</resources>
