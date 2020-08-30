@@ -1,6 +1,5 @@
 # ISMOptiMaintMobile
 
-Industrial Systeme manager for OptiMaint on Mobile
+Industrial Systeme manager for OptiMaint On Mobile
 
-Description ici.
-
+ISM OptiMaint Mobile est un projet permettant de travail sur mobile avec le logiciel OptiMaint. Le premier volet vise à travailler avec le module stock en particulier la fonction stock.
