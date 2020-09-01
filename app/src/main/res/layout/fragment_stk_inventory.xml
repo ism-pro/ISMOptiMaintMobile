@@ -34,6 +34,7 @@
                     android:layout_marginTop="1dp"
                     android:layout_marginEnd="1dp"
                     android:layout_span="3"
+                    android:textAlignment="center"
                     android:textSize="14sp" />
 
                 <Button
@@ -42,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="3"
                     android:layout_centerInParent="true"
-                    android:layout_span="2"
+                    android:layout_span="3"
                     android:text="Scanner"
                     android:textSize="18sp" />
             </TableRow>
@@ -52,11 +53,11 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/tbHeaderCtrl"
+                    android:id="@+id/tbHeaderAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="0"
-                    android:text="Ctrl"
+                    android:text="+"
                     android:textAlignment="center"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -101,6 +102,34 @@
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/tbHeaderRem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="5"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="5"
+                    android:text="-" />
             </TableRow>
 
         </TableLayout>

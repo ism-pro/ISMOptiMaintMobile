@@ -6,6 +6,7 @@
     android:label="@string/menu_database"
     app:startDestination="@+id/nav_home">
 
+    <!-- Démarrage -->
     <fragment
         android:id="@+id/nav_home"
         android:name="org.ism.ismoptimaintmobile.ui.home.HomeFragment"
@@ -13,24 +14,31 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="org.ism.ismoptimaintmobile.ui.stk.inventory.StkInventoryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_stk_inventory" />
-
-    <fragment
         android:id="@+id/nav_slideshow"
         android:name="org.ism.ismoptimaintmobile.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+
+    <!-- Stock -->
     <fragment
-        android:id="@+id/nav_login"
-        android:name="org.ism.ismoptimaintmobile.ui.login.ui.login.LoginFragment"
-        android:label="@string/menu_login"
-        tools:layout="@layout/fragment_login" />
+        android:id="@+id/nav_stk_inventory"
+        android:name="org.ism.ismoptimaintmobile.ui.stk.inventory.StkInventoryFragment"
+        android:label="@string/menu_stk_inventory"
+        tools:layout="@layout/fragment_stk_inventory" />
+
+
+    <!-- Configuration -->
     <fragment
         android:id="@+id/nav_database"
         android:name="org.ism.ismoptimaintmobile.ui.database.DatabaseFragment"
         android:label="@string/menu_database"
         tools:layout="@layout/fragment_database" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="org.ism.ismoptimaintmobile.ui.login.ui.login.LoginFragment"
+        android:label="@string/menu_login"
+        tools:layout="@layout/fragment_login" />
+
 </navigation>

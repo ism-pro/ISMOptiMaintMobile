@@ -10,9 +10,11 @@
 
     <!-- Groupe Menu Démarrage -->
     <string name="menu_home">Acceuil</string>
-    <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
+    <!-- Groupe Menu Stock -->
+    <string name="menu_stock">Stock</string>
+    <string name="menu_stk_inventory">Inventaire</string>
 
     <!-- Groupe Menu Configurations -->
     <string name="menu_setup">Configurations</string>

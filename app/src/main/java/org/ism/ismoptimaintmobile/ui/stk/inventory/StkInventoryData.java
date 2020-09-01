@@ -1,5 +1,7 @@
 package org.ism.ismoptimaintmobile.ui.stk.inventory;
 
+import androidx.annotation.NonNull;
+
 import net.sourceforge.jtds.jdbc.DateTime;
 
 import java.util.Date;
@@ -17,6 +19,22 @@ public class StkInventoryData {
         this.magasin = magasin;
         this.quantity = 1;
         this.dateScanned = new Date();
+    }
+
+    /**
+     * This constructor is base on setup article stock like ###-#####/M## with first part article
+     * and second part magasin
+     * @param stock like ###-#####/M## with first part article and second part magasin
+     */
+    public StkInventoryData(@NonNull String stock){
+        if(stock!=null){
+            String data[] = stock.replace("§", "/").replace("$", "/").split("/");
+            this.id = 0;
+            this.article = data[0];
+            this.magasin = data[1];
+            this.quantity = 1;
+            this.dateScanned = new Date();
+        }
     }
 
 

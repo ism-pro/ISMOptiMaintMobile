@@ -1,5 +1,6 @@
 package org.ism.ismoptimaintmobile;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,29 +14,35 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import org.ism.ismoptimaintmobile.ui.stk.inventory.StkInventory;
 import org.ism.ismoptimaintmobile.ui.stk.inventory.StkInventoryFragment;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private StkInventoryFragment stkInventoryFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,18 +51,25 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        
+        
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_database, R.id.nav_login)
+                R.id.nav_home, 
+                R.id.nav_slideshow,
+                R.id.nav_stk_inventory,
+                R.id.nav_database, R.id.nav_login)
                 .setDrawerLayout(drawer)
                 .build();
+
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override
@@ -84,22 +98,17 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
 
-                StkInventoryFragment.stkInventoryViewModel.newScanned(result.getContents());
-                StkInventoryFragment.inventory.append(result.getContents());
-                StkInventoryFragment.add(StkInventoryFragment.inventory.getAsTableRow(StkInventoryFragment.inventory.getInventories().size()-1, this));
+                if(stkInventoryFragment==null) {
+                    NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().getFragments().get(0);
+                    stkInventoryFragment = (StkInventoryFragment) navHostFragment.getChildFragmentManager().getPrimaryNavigationFragment();
+                }
+                stkInventoryFragment.setScannedValue(result.getContents());
 
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
-
-
-
-
-
-
-
 
 
 

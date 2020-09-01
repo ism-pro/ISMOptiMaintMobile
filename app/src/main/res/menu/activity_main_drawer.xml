@@ -14,13 +14,23 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
+    </group>
+
+
+    <group
+        android:id="@+id/nav_grp_stock"
+        android:checkableBehavior="all"
+        android:enabled="true"
+        android:menuCategory="alternative"
+        android:visible="true"
+        >
+        <item
+            android:id="@+id/nav_stk_inventory"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_stk_inventory" />
     </group>
 
 
@@ -32,7 +42,7 @@
         android:visible="true">
         <item
             android:id="@+id/nav_database"
-            android:icon="@drawable/ic_favicon"
+            android:icon="@drawable/ic_launcher_ism_mobile_background"
             android:title="@string/menu_database" />
 
         <item
